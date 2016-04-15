@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="plugins/remodaljs/remodal.css">
+        <link rel="stylesheet" href="plugins/remodaljs/remodal-default-theme.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -25,8 +27,8 @@
             <h1><i class="blue">M</i><i>a</i><i>t</i><i>h</i> <i class="blue">T</i><i>r</i><i>a</i><i class="blue">i</i><i>n</i><i>e</i><i>r</i></h1>
             <div class="buttons">
                 <button class="start-btn" id="play">Play</button>
-                <button class="start-btn" id="options">Options</button>
-                <button class="start-btn" id="options">Exit</button>
+                <a href="#game-option" class="start-btn" id="options">Options</a>
+                <a href="/" class="start-btn" id="options">Exit</a>
             </div>
         </div>
 
@@ -63,8 +65,33 @@
         </div>
     </div>
 
+    <div class="remodal" data-remodal-id="game-option" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+        <div>
+            <h2 id="modal1Title">Game options</h2>
+            <p id="modal1Desc">
+                Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin
+                with declarative state notation and hash tracking.
+            </p>
+        </div>
+        <br>
+    </div>
+
+    <div class="remodal modal-with-results" data-remodal-id="game-results" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+        <div>
+            <h2 id="modal1Title">Ваш результат:</h2>
+            <p>
+                Правильных ответов - <span id="modal-results"></span>
+            </p>
+            <a href="/" class="remodal-cancel">Выход</a>
+            <button id="levelUp" class="remodal-confirm">Продолжить</button>
+        </div>
+        <br>
+    </div>
+
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
         <script src="js/plugins.js"></script>
+        <script src="plugins/remodaljs/remodal.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

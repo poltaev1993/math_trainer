@@ -185,6 +185,9 @@ button:focus {
   border: none;
   font-family: 'Nunito', sans-serif;
   box-shadow: inset 0 0 30px 10px #008000;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: inline-block;
 }
 .centered-block .start-btn:active {
   box-shadow: inset 0 0 40px 0px #008000;
@@ -223,7 +226,6 @@ button:focus {
   display: inline-block;
   font-size: 120px;
   text-align: center;
-  vertical-align: middle;
 }
 .game #result {
   padding: 0 5px;
@@ -234,4 +236,7 @@ button:focus {
 .view {
   font-family: FAZINGSONE, sans-serif;
   font-size: 48px;
+}
+.remodal {
+  font-size: 30px;
 }
