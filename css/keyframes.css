@@ -1,0 +1,140 @@
+@-moz-keyframes bgFingerPut {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 400px 400px;
+  }
+  50% {
+    background-position: 800px 800px;
+  }
+  75% {
+    background-position: 400px 400px;
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+}
+@-webkit-keyframes bgFingerPut {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 400px 400px;
+  }
+  50% {
+    background-position: 800px 800px;
+  }
+  75% {
+    background-position: 400px 400px;
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+}
+@-o-keyframes bgFingerPut {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 400px 400px;
+  }
+  50% {
+    background-position: 800px 800px;
+  }
+  75% {
+    background-position: 400px 400px;
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+}
+@keyframes bgFingerPut {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 400px 400px;
+  }
+  50% {
+    background-position: 800px 800px;
+  }
+  75% {
+    background-position: 400px 400px;
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+}
+@-moz-keyframes moveRight {
+  from {
+    background-position: left top;
+  }
+  to {
+    background-position: -3000px 0;
+  }
+}
+@-webkit-keyframes moveRight {
+  from {
+    background-position: left top;
+  }
+  to {
+    background-position: -3000px 0;
+  }
+}
+@-o-keyframes moveRight {
+  from {
+    background-position: left top;
+  }
+  to {
+    background-position: -3000px 0;
+  }
+}
+@keyframes moveRight {
+  from {
+    background-position: left top;
+  }
+  to {
+    background-position: -3000px 0;
+  }
+}
+@-moz-keyframes zooming {
+  from {
+    background-size: 100%;
+    background-position: center top;
+  }
+  to {
+    background-size: 200%;
+    background-position: center top;
+  }
+}
+@-webkit-keyframes zooming {
+  from {
+    background-size: 100%;
+    background-position: center top;
+  }
+  to {
+    background-size: 200%;
+    background-position: center top;
+  }
+}
+@-o-keyframes zooming {
+  from {
+    background-size: 100%;
+    background-position: center top;
+  }
+  to {
+    background-size: 200%;
+    background-position: center top;
+  }
+}
+@keyframes zooming {
+  from {
+    background-size: 100%;
+    background-position: center top;
+  }
+  to {
+    background-size: 200%;
+    background-position: center top;
+  }
+}

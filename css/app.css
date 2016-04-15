@@ -1,0 +1,237 @@
+@import 'keyframes.css';
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+@font-face {
+  font-family: Mousie;
+  src: url("../fonts/Mousie.ttf");
+}
+@font-face {
+  font-family: FAZINGSONE;
+  src: url("../fonts/FAZINGSONE.TTF");
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  -webkit-animation-name: bgFingerPut;
+          animation-name: bgFingerPut;
+}
+body.bgp1,
+body.bgp2,
+body.bgp3,
+body.bgp4,
+body.bgp5,
+body.bgp6,
+body.bgp7,
+body.bgp8,
+body.bgp9,
+body.bgp10 {
+  -webkit-animation: none;
+          animation: none;
+  background-size: 100%;
+  background-position: 0 0;
+}
+body.bgp3,
+body.bgp5,
+body.bgp7,
+body.bgp9,
+body.bgp1 {
+  background-image: url("../img/bgp1.jpg");
+  background-size: 200%;
+  -webkit-animation-name: moveRight;
+          animation-name: moveRight;
+  -webkit-animation-duration: 50s;
+          animation-duration: 50s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+body.bgp4,
+body.bgp6,
+body.bgp8,
+body.bgp10,
+body.bgp2 {
+  background-image: url("../img/bgp2.png");
+  -webkit-animation-name: zooming;
+          animation-name: zooming;
+  -webkit-animation-duration: 50s;
+          animation-duration: 50s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.position-relative {
+  position: relative;
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.63);
+}
+button:active,
+button:hover,
+button:focus {
+  outline: none;
+}
+.section {
+  visibility: hidden;
+  display: block;
+  opacity: 0;
+  height: 0;
+  transition: opacity 0.75s;
+}
+.section.show {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+.proverka {
+  font-family: FAZINGSONE, sans-serif;
+  font-size: 30px;
+}
+#a .view {
+  right: 50%;
+}
+#a .view:after {
+  left: 90%;
+}
+#b .view {
+  left: 50%;
+}
+#b .view:after {
+  right: 90%;
+}
+.view {
+  position: absolute;
+  background: transparent;
+  bottom: 100%;
+  padding: 10px;
+  min-width: 500px;
+  border: 2px solid #f00;
+  border-radius: 5px;
+}
+.view:after {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(0,213,114,0);
+  border-top-color: #f00;
+  border-width: 10px;
+  margin-left: -10px;
+}
+.btn-numbers {
+  margin-top: 50px;
+}
+.btn-numbers .btn-options {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+  border: none;
+  padding: 20px;
+  font-size: 42px;
+  font-family: 'Nunito', sans-serif;
+  border-radius: 6px;
+  background-color: #f00;
+  color: #fff;
+  transition: -webkit-transform 0.75s;
+  transition: transform 0.75s;
+  transition: transform 0.75s, -webkit-transform 0.75s;
+}
+.btn-numbers .btn-options:hover {
+  -webkit-transform: translateY(-30px);
+      -ms-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+.btn-numbers .btn-options:nth-child(odd) {
+  background-color: #8a2be2;
+}
+.btn-numbers .btn-options:nth-child(3n) {
+  background-color: #ff0;
+}
+.centered-block {
+  position: absolute;
+  font-family: 'Nunito', sans-serif;
+  font-size: 32px;
+  top: 50%;
+  left: 50%;
+  max-width: 700px;
+  width: 100%;
+  min-width: 300px;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.centered-block h1 i {
+  font-style: normal;
+  color: #e7ca00;
+}
+.centered-block h1 i:nth-child(even) {
+  color: #f00;
+}
+.centered-block h1 i.blue {
+  color: #00f;
+}
+.centered-block .start-btn {
+  color: #fff;
+  background-color: #47b901;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Nunito', sans-serif;
+  box-shadow: inset 0 0 30px 10px #008000;
+}
+.centered-block .start-btn:active {
+  box-shadow: inset 0 0 40px 0px #008000;
+}
+.results {
+  display: inline-block;
+}
+#mistake {
+  font-size: 120px;
+  color: #f00;
+}
+.game {
+  position: absolute;
+  font-family: 'Nunito', sans-serif;
+  font-size: 32px;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  min-width: 300px;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.game #result,
+.game #eq,
+.game #ch {
+  font-family: 'Nunito', sans-serif;
+  display: inline-block;
+  font-size: 120px;
+  text-align: center;
+}
+.game #a,
+.game #b {
+  max-width: 330px;
+  display: inline-block;
+  font-size: 120px;
+  text-align: center;
+  vertical-align: middle;
+}
+.game #result {
+  padding: 0 5px;
+  margin: 0 10px;
+  background-color: #32cd32;
+  color: #fff;
+}
+.view {
+  font-family: FAZINGSONE, sans-serif;
+  font-size: 48px;
+}

@@ -1,0 +1,197 @@
+@import 'keyframes.css'
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700);
+@font-face {
+  font-family: Mousie;
+  src: url(../fonts/Mousie.ttf);
+}
+
+
+@font-face {
+  font-family: FAZINGSONE;
+  src: url(../fonts/FAZINGSONE.TTF);
+}
+body
+  //background-image: url(../img/bg.jpg)
+  font-family 'Nunito', sans-serif;
+  animation-name bgFingerPut
+  &.bgp1
+  &.bgp2
+  &.bgp3
+  &.bgp4
+  &.bgp5
+  &.bgp6
+  &.bgp7
+  &.bgp8
+  &.bgp9
+  &.bgp10
+    animation none
+    background-size: 100%
+    background-position: 0 0
+  &.bgp3
+  &.bgp5
+  &.bgp7
+  &.bgp9
+  &.bgp1
+    background-image: url(../img/bgp1.jpg)
+    background-size: 200%
+    animation-name moveRight
+    animation-duration 50s
+    animation-direction alternate
+    animation-iteration-count infinite
+  &.bgp4
+  &.bgp6
+  &.bgp8
+  &.bgp10
+  &.bgp2
+    background-image: url(../img/bgp2.png)
+    animation-name zooming
+    animation-duration 50s
+    animation-direction alternate
+    animation-iteration-count infinite
+
+.position-relative
+  position relative
+
+.bg
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(255, 255, 255, 0.63)
+button
+  &:active
+  &:hover
+  &:focus
+    outline none
+
+.section
+  visibility hidden
+  display block
+  opacity 0
+  height 0
+  transition opacity 0.75s
+  &.show
+    visibility visible
+    opacity 1
+    height auto
+.proverka
+  font-family FAZINGSONE, sans-serif
+  font-size 30px
+#a
+  .view
+    right 50%
+    &:after
+      left 90%
+#b
+  .view
+    left 50%
+    &:after
+      right 90%
+.view {
+    position: absolute;
+    background: transparent;
+    bottom: 100%;
+    padding: 10px;
+    min-width: 500px;
+    border: 2px solid red;
+    border-radius: 5px;
+  }
+.view:after {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(0, 213, 114, 0);
+  border-top-color: red;
+  border-width: 10px;
+  margin-left: -10px;
+}
+.btn-numbers
+  margin-top 50px
+  .btn-options
+    transform: translateY(0px);
+    border none
+    padding 20px
+    font-size 42px
+    font-family 'Nunito', sans-serif;
+    border-radius 6px
+    background-color: red
+    color #fff
+    transition transform 0.75s
+    &:hover
+      transform: translateY(-30px);
+    &:nth-child(odd)
+      background-color: blueviolet
+    &:nth-child(3n)
+      background-color: yellow
+.centered-block
+  position absolute
+  font-family 'Nunito', sans-serif;
+  font-size 32px
+  top: 50%
+  left: 50%
+  max-width 700px
+  width 100%
+  min-width 300px
+  text-align center
+  transform translate(-50%, -50%)
+  h1
+    i
+      font-style normal
+      color #E7CA00
+      &:nth-child(even)
+        color red
+      &.blue
+        color blue
+  .start-btn
+    color #ffff
+    background-color: #47B901
+    border-radius 6px
+    border none
+    font-family 'Nunito', sans-serif;
+    box-shadow inset 0 0 30px 10px green
+    &:active
+      box-shadow inset 0 0 40px 0px green
+
+.results
+  display inline-block
+#mistake
+  font-size  120px
+  color red
+.game
+  position absolute
+  font-family 'Nunito', sans-serif;
+  font-size 32px
+  top: 50%
+  left: 50%
+  width 100%
+  min-width 300px
+  text-align center
+  transform translate(-50%, -50%)
+  #result
+  #eq
+  #ch
+    font-family'Nunito', sans-serif;
+    display inline-block
+    font-size 120px
+    text-align center
+  #a
+  #b
+    max-width 330px
+    display inline-block
+    font-size 120px
+    text-align center
+    vertical-align middle
+  #result
+    padding 0 5px
+    margin: 0 10px
+    background-color: limegreen;
+    color #fff
+
+.view
+    font-family FAZINGSONE, sans-serif
+    font-size 48px
