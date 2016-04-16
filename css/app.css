@@ -195,7 +195,7 @@ button:focus {
 .results {
   display: inline-block;
 }
-#mistake {
+.mistake {
   font-size: 120px;
   color: #f00;
 }
@@ -211,6 +211,15 @@ button:focus {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+/*#result
+    padding 0 5px
+    margin: 0 10px
+    background-color: limegreen;
+    color #fff
+*/
+}
+.game .number {
+  display: inline-block;
 }
 .game #result,
 .game #eq,
@@ -221,17 +230,12 @@ button:focus {
   text-align: center;
 }
 .game #a,
-.game #b {
+.game #b,
+.game #result {
   max-width: 330px;
   display: inline-block;
   font-size: 120px;
   text-align: center;
-}
-.game #result {
-  padding: 0 5px;
-  margin: 0 10px;
-  background-color: #32cd32;
-  color: #fff;
 }
 .view {
   font-family: FAZINGSONE, sans-serif;
