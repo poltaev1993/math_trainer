@@ -17,18 +17,42 @@
         <link rel="stylesheet" href="css/app.css">
         <link rel="stylesheet" href="plugins/remodaljs/remodal.css">
         <link rel="stylesheet" href="plugins/remodaljs/remodal-default-theme.css">
+        <link rel="stylesheet" href="plugins/swiperjs/css/swiper.min.css">
+        <link rel="stylesheet" href="plugins/fontawesome/css/font-awesome.min.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
     <div class="bg"></div>
+    <div class="prompt">
+        <div class="p_container">
+            <div id="first">
+                <div class="p-view"></div>
+            </div>
+
+            <div id="sim" class="simb">
+            </div>
+
+            <div id="second">
+                <div class="p-view"></div>
+            </div>
+            <div class="simb" id="eq">=</div>
+            <div id="res">
+                <div class="p-view"></div>
+            </div>
+        </div>
+    </div>
+    <div class="sound"><i class="fa fa-music fa-2x"></i></div>
+    <audio id="bg-audio" class="background-audio" src="audio/matthias harris - feeling positive.mp3" controls loop autoplay hidden="true">
+        <embed src="audio/matthias harris - feeling positive.mp3" width="180" height="90"  />
+    </audio>
 
     <div class="starting-page section show">
         <div class="centered-block">
             <h1><i class="blue">M</i><i>a</i><i>t</i><i>h</i> <i class="blue">T</i><i>r</i><i>a</i><i class="blue">i</i><i>n</i><i>e</i><i>r</i></h1>
             <div class="buttons">
-                <button class="start-btn" id="play">Play</button>
-                <a href="#game-option" class="start-btn" id="options">Options</a>
-                <a href="/" class="start-btn" id="options">Exit</a>
+                <button class="start-btn red-btn" id="play">Play</button>
+                <a href="#game-option" class="start-btn blue-btn" id="options">Options</a>
+                <a href="/" class="start-btn black-btn" id="options">Exit</a>
             </div>
         </div>
 
@@ -36,6 +60,7 @@
 
     <div class="game section">
         <!--<input type="text">-->
+        <button class="prompt-btn">Подсказка</button>
         <div class="expression">
            <!-- <div class="proverka">asdfghjkl <br>qwertyuiop</div>-->
             <div id="a" class="position-relative">
@@ -67,14 +92,46 @@
             <button class="btn-options"></button>
         </div>
     </div>
+    <div class="next-buttons">
+        <button class="start-btn circle-btn next__js"><i class="fa fa-arrow-right"></i></button>
+    </div>
 
-    <div class="remodal" data-remodal-id="game-option" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+    <div class="remodal option-bg" data-remodal-id="game-option" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
         <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
         <div>
-            <h2 id="modal1Title">Game options</h2>
+            <!-- Slider main container -->
+            <div id="option-slider" class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide text-left">
+                        <div class="hello-words">
+                            <img src="img/friend.gif" alt="friend">
+                            <h2 id="modal1Title" class="option-cloud">Привет, меня зовут Руди, давай поиграем! Игра очень интересная!</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-slide text-left">
+                        <div class="hello-words">
+                            <img src="img/friend.gif" alt="friend">
+                            <h2 id="modal1Title" class="option-cloud">Нажимаешь на красную кнопку <button class="start-btn red-btn">Играть</button>, после начнется игра!</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-slide text-left">
+                        <div class="hello-words">
+                            <img src="img/friend.gif" alt="friend">
+                            <h2 id="modal1Title" class="option-cloud">Тебе нужно решить как можно больше правильных примеров,
+                            чтобы заработать чупачупсики!</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-nav swiper-button-prev start-btn default-btn"><i class="fa fa-arrow-left"></i></div>
+                <div class="swiper-nav swiper-button-next start-btn blue-btn"><i class="fa fa-arrow-right"></i></div>
+            </div>
+
             <p id="modal1Desc">
-                Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin
-                with declarative state notation and hash tracking.
+
             </p>
         </div>
         <br>
@@ -87,14 +144,20 @@
                 Правильных ответов - <span id="modal-results"></span>
             </p>
             <a href="/" class="remodal-cancel">Выход</a>
-            <button id="levelUp" class="remodal-confirm">Продолжить</button>
+            <button id="levelUp" class="remodal-confirm">Играть еще</button>
         </div>
         <br>
     </div>
 
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
         <script src="js/plugins.js"></script>
+
+        <!--Swiper js-->
+        <script src="plugins/swiperjs/js/swiper.jquery.min.js"></script>
+        <script src="plugins/swiperjs/js/swiper.min.js"></script>
         <script src="plugins/remodaljs/remodal.min.js"></script>
+        <script src="js/app.js"></script>
         <script src="js/main.js"></script>
+
     </body>
 </html>

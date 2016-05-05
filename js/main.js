@@ -28,19 +28,20 @@ $(function(){
         if(th.text() == expressions[step][parameter + '']){
             $('#' + parameter).find('.number').text(expressions[step][parameter + '']);
             step++;
-            setTimeout(function(){
+            /*setTimeout(function(){
                 render(expressions, step);
-            }, 1000);
-
+            }, 1000);*/
+            $('.next__js').show();
         } else {
             $('#' + parameter).find('.mistake').text(th.text());
             $('#' + parameter).find('.number').text(expressions[step][parameter + '']);
             mistakes++;
             step++;
             $('.btn-options').prop('disabled', true);
-            setTimeout(function(){
+            /*setTimeout(function(){
                 render(expressions, step);
-            }, 1000);
+            }, 1000);*/
+            $('.next__js').show();
         }
     });
 
@@ -53,6 +54,10 @@ $(function(){
         render(expressions, step);
         inst.close();
     });
+
+    $('.next__js').on('click', function () {
+        render(expressions, step);
+    })
 
     render(expressions, step);
 });
@@ -80,6 +85,7 @@ var getTasks = function(){
 }
 
 var clear = function(step){
+    $('.next__js').hide();
     $('.btn-options').prop('disabled', false);
     $('body').attr('class', '');
     $('body').addClass('bgp' + (step + 1));
@@ -87,6 +93,7 @@ var clear = function(step){
 }
 
 var render = function(exp, step){
+    $('.view').removeClass('hide');
     if(step < Object.size(exp)){
         clear(step);
         var sim = simbols[randomBetween(0, 4)];
@@ -116,12 +123,18 @@ var render = function(exp, step){
 
         $('#' + p).find('.number').text('');
         $('#' + p).find('.view').html('');
+        $('#' + p).find('.view').addClass('hide');
         $('#' + p).find('.view').hide();
         $('.mistake').text('');
     } else {
         $('#modal-results').text(Object.size(exp) - mistakes);
         inst.open();
     }
+
+    $('#first').find('.p-view').html($('#a').find('.view').html());
+    $('#second').find('.p-view').html($('#b').find('.view').html());
+    $('#res').find('.p-view').html($('#result').find('.view').html());
+    $('#sim').text($('#ch').text());
 }
 
 var renderAnswers = function(exp, el){
@@ -129,6 +142,17 @@ var renderAnswers = function(exp, el){
     var ready = false;
     el.each(function(){
         var rand = randomBetween(0, 20);
+        var randValues = true;
+        while(randValues){
+            el.each(function(){
+                if(rand == +$(this).text()){
+                    rand = randomBetween(0, 20);
+                    randValues = true;
+                } else {
+                    randValues = false;
+                }
+            });
+        }
         if(rand == p){
             ready = true;
             $(this).text(rand);
@@ -141,8 +165,9 @@ var renderAnswers = function(exp, el){
 
 var imageInset = function(el, length, file){
     for(var i = 0; i < length; i++){
-        el.append('<img src="img/' + file + '" width="70"/>');
+        el.append('<img src="img/' + file + '" width="50"/>');
     }
+    el.css('width', length * 50 + 25);
     el.show();
 }
 

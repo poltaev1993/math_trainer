@@ -1,3 +1,4 @@
+@import 'mediaqueries.css';
 @import 'keyframes.css';
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 @font-face {
@@ -7,6 +8,9 @@
 @font-face {
   font-family: FAZINGSONE;
   src: url("../fonts/FAZINGSONE.TTF");
+}
+.text-left {
+  text-align: left;
 }
 body {
   font-family: 'Nunito', sans-serif;
@@ -25,7 +29,6 @@ body.bgp9,
 body.bgp10 {
   -webkit-animation: none;
           animation: none;
-  background-size: 100%;
   background-position: 0 0;
 }
 body.bgp3,
@@ -34,7 +37,6 @@ body.bgp7,
 body.bgp9,
 body.bgp1 {
   background-image: url("../img/bgp1.jpg");
-  background-size: 200%;
   -webkit-animation-name: moveRight;
           animation-name: moveRight;
   -webkit-animation-duration: 50s;
@@ -50,8 +52,6 @@ body.bgp8,
 body.bgp10,
 body.bgp2 {
   background-image: url("../img/bgp2.png");
-  -webkit-animation-name: zooming;
-          animation-name: zooming;
   -webkit-animation-duration: 50s;
           animation-duration: 50s;
   -webkit-animation-direction: alternate;
@@ -63,11 +63,12 @@ body.bgp2 {
   position: relative;
 }
 .bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: -1;
   background-color: rgba(255,255,255,0.63);
 }
 button:active,
@@ -79,7 +80,6 @@ button:focus {
   visibility: hidden;
   display: block;
   opacity: 0;
-  height: 0;
   transition: opacity 0.75s;
 }
 .section.show {
@@ -105,11 +105,10 @@ button:focus {
 }
 .view {
   position: absolute;
-  background: transparent;
+  background: #ff0;
   bottom: 100%;
-  padding: 10px;
-  min-width: 500px;
-  border: 2px solid #f00;
+  padding: 0 5px;
+  border: 2px solid #ff0;
   border-radius: 5px;
 }
 .view:after {
@@ -121,20 +120,15 @@ button:focus {
   position: absolute;
   pointer-events: none;
   border-color: rgba(0,213,114,0);
-  border-top-color: #f00;
+  border-top-color: #ff0;
   border-width: 10px;
   margin-left: -10px;
-}
-.btn-numbers {
-  margin-top: 50px;
 }
 .btn-numbers .btn-options {
   -webkit-transform: translateY(0px);
       -ms-transform: translateY(0px);
           transform: translateY(0px);
   border: none;
-  padding: 20px;
-  font-size: 42px;
   font-family: 'Nunito', sans-serif;
   border-radius: 6px;
   background-color: #f00;
@@ -178,7 +172,7 @@ button:focus {
 .centered-block h1 i.blue {
   color: #00f;
 }
-.centered-block .start-btn {
+.start-btn {
   color: #fff;
   background-color: #47b901;
   border-radius: 6px;
@@ -189,34 +183,30 @@ button:focus {
   padding: 5px 10px;
   display: inline-block;
 }
-.centered-block .start-btn:active {
+.start-btn.red-btn {
+  background-color: #f00;
+  box-shadow: inset 0 0 30px 10px #ca0000;
+}
+.start-btn.blue-btn {
+  background-color: #00f;
+  box-shadow: inset 0 0 30px 10px #00009b;
+}
+.start-btn.black-btn {
+  background-color: #333;
+  box-shadow: inset 0 0 30px 10px #000;
+}
+.start-btn.default-btn {
+  background-color: #e1e1e1;
+  box-shadow: inset 0 0 30px 10px #999;
+}
+.start-btn:active {
   box-shadow: inset 0 0 40px 0px #008000;
 }
 .results {
   display: inline-block;
 }
 .mistake {
-  font-size: 120px;
   color: #f00;
-}
-.game {
-  position: absolute;
-  font-family: 'Nunito', sans-serif;
-  font-size: 32px;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  min-width: 300px;
-  text-align: center;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-/*#result
-    padding 0 5px
-    margin: 0 10px
-    background-color: limegreen;
-    color #fff
-*/
 }
 .game .number {
   display: inline-block;
@@ -226,7 +216,6 @@ button:focus {
 .game #ch {
   font-family: 'Nunito', sans-serif;
   display: inline-block;
-  font-size: 120px;
   text-align: center;
 }
 .game #a,
@@ -234,13 +223,144 @@ button:focus {
 .game #result {
   max-width: 330px;
   display: inline-block;
+  text-align: center;
+}
+#result {
+  position: relative;
+  max-width: 330px;
+  display: inline-block;
   font-size: 120px;
   text-align: center;
+}
+#result .view {
+  bottom: auto;
+  top: 100%;
+}
+#result .view:after {
+  top: auto;
+  bottom: 100%;
+  border-top-color: transparent;
+  border-bottom-color: #ff0;
 }
 .view {
   font-family: FAZINGSONE, sans-serif;
   font-size: 48px;
 }
-.remodal {
-  font-size: 30px;
+.hello-words {
+  position: relative;
+  text-align: left;
+  display: inline-block;
+}
+.hello-words .option-cloud {
+  position: absolute;
+  top: 0;
+  left: 105%;
+  width: 100%;
+  background-color: #e1e1e1;
+  padding: 10px;
+  border-radius: 6px;
+}
+.hello-words .option-cloud:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136,183,213,0);
+  border-right-color: #e1e1e1;
+  border-width: 10px;
+  margin-top: -10px;
+}
+body .option-bg {
+  background-image: url("../img/option-bg.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#option-slider {
+  padding-bottom: 80px;
+}
+body .swiper-nav {
+  bottom: 0px;
+  top: auto;
+  width: 87px;
+  height: 24px;
+  font-size: 18px;
+  z-index: 100;
+}
+body .swiper-nav.swiper-button-prev {
+  background: none;
+  right: 50%;
+  left: auto;
+  margin-right: 10px;
+}
+body .swiper-nav.swiper-button-next {
+  background: none;
+  left: 50%;
+  right: auto;
+}
+.next__js {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 24px;
+}
+.sound {
+  position: fixed;
+  cursor: pointer;
+/*width 50px
+  height 50px*/
+  border-radius: 50%;
+  background-color: #f28d8d;
+  transition: background-color 0.75s;
+}
+.sound.turn-off {
+  background-color: #e1e1e1;
+}
+.sound i {
+  padding: 20px;
+  color: #fff;
+}
+body .next__js {
+  border-radius: 50%;
+  padding: 15px 20px;
+}
+.prompt-btn {
+  background-color: #ff0;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+}
+.prompt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff0;
+  padding: 40px 20px;
+  z-index: 10;
+  visibility: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.75s;
+}
+.prompt.show {
+  visibility: visible;
+  z-index: 10;
+  opacity: 1;
+}
+.simb {
+  text-align: center;
+  font-size: 42px;
+}
+.p-view {
+  text-align: center;
+}
+.p-view img {
+  width: 70px;
 }

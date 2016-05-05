@@ -1,0 +1,186 @@
+@media only screen and (min-width: 0) {
+  .btn-numbers {
+    margin-top: 30px;
+  }
+  .remodal {
+    font-size: 15px;
+  }
+  .next__js {
+    bottom: 140px;
+  }
+  .sound {
+    top: 40px;
+    right: 40px;
+  }
+  .view {
+    display: none !important;
+  }
+  .game {
+    position: static;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    margin-top: 50%;
+  }
+  .btn-numbers .btn-options {
+    padding: 0px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 21px;
+  }
+  .mistake {
+    font-size: 45px;
+    color: #f00;
+  }
+  .game {
+    font-size: 32px;
+  }
+  .game .number {
+    display: inline-block;
+  }
+  .game #result,
+  .game #eq,
+  .game #ch {
+    font-size: 45px;
+  }
+  .game #a,
+  .game #b,
+  .game #result {
+    font-size: 45px;
+  }
+  .start-btn {
+    font-size: 14px;
+  }
+  .starting-page h1 {
+    font-size: 1em;
+  }
+  .hello-words .option-cloud {
+    font-size: 15px;
+    min-width: 160px;
+  }
+  .hello-words img {
+    max-width: 80px;
+  }
+  body {
+    font-family: 'Nunito', sans-serif;
+    animation-name: bgFingerPut;
+  }
+  body.bgp1,
+  body.bgp2,
+  body.bgp3,
+  body.bgp4,
+  body.bgp5,
+  body.bgp6,
+  body.bgp7,
+  body.bgp8,
+  body.bgp9,
+  body.bgp10 {
+    background-size: 630%;
+  }
+  body.bgp3,
+  body.bgp5,
+  body.bgp7,
+  body.bgp9,
+  body.bgp1 {
+    animation-name: mobileZooming;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .prompt-btn {
+    display: none;
+  }
+  .btn-numbers {
+    margin-top: 100px;
+  }
+  .remodal {
+    font-size: 30px;
+  }
+  .next__js {
+    bottom: 20px;
+  }
+  .sound {
+    top: 20px;
+    right: 20px;
+  }
+  .view {
+    display: block !important;
+  }
+  .view.hide {
+    display: none !important;
+  }
+  .game {
+    position: absolute;
+    margin-top: 0;
+    font-family: 'Nunito', sans-serif;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    min-width: 300px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+  .btn-numbers .btn-options {
+    padding: 20px;
+    font-size: 42px;
+    width: auto;
+    height: auto;
+    line-height: auto;
+  }
+  .mistake {
+    font-size: 120px;
+    color: #f00;
+  }
+  .game {
+    font-size: 32px;
+  }
+  .game .number {
+    display: inline-block;
+  }
+  .game #result,
+  .game #eq,
+  .game #ch {
+    font-size: 120px;
+  }
+  .game #a,
+  .game #b,
+  .game #result {
+    font-size: 120px;
+  }
+  .start-btn {
+    font-size: 100%;
+  }
+  .starting-page h1 {
+    font-size: 2em;
+  }
+  .hello-words .option-cloud {
+    font-size: 24px;
+    min-width: 400px;
+  }
+  .hello-words img {
+    min-width: 180px;
+  }
+  body {
+    font-family: 'Nunito', sans-serif;
+    animation-name: bgFingerPut;
+  }
+  body.bgp1,
+  body.bgp2,
+  body.bgp3,
+  body.bgp4,
+  body.bgp5,
+  body.bgp6,
+  body.bgp7,
+  body.bgp8,
+  body.bgp9,
+  body.bgp10 {
+    background-size: 100%;
+  }
+  body.bgp3,
+  body.bgp5,
+  body.bgp7,
+  body.bgp9,
+  body.bgp1 {
+    background-size: 200%;
+    animation-name: zooming;
+  }
+}
